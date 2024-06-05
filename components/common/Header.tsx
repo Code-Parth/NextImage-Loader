@@ -2,12 +2,15 @@
 
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { MoonIcon, SunIcon, GitHubLogoIcon, ReloadIcon } from "@radix-ui/react-icons";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
 export default function Header() {
+    const pathname = usePathname();
     const { setTheme } = useTheme();
+
 
     return (
         <>
@@ -19,11 +22,16 @@ export default function Header() {
                                 NextImage-Loader
                             </h1>
                         </Link>
-                        <Button
-                            variant="outline"
-                        >
-                            <ReloadIcon className="h-[1.2rem] w-[1.2rem]" />
-                        </Button>
+                        {pathname === "/" ? (
+                            <Button
+                                variant="outline"
+                                onClick={() => { window.location.reload() }}
+                            >
+                                <ReloadIcon className="h-[1.2rem] w-[1.2rem]" />
+                            </Button>
+                        ) : (
+                            null
+                        )}
                     </div>
 
                     <div className="flex items-center gap-4">
