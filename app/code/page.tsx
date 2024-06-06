@@ -197,52 +197,50 @@ The \`NextImage\` component is a powerful yet simple tool for enhancing image lo
 
 export default function CodePage() {
     return (
-        <main className="w-full max-w-[90%] mx-auto flex items-center">
-            <div className="flex flex-col gap-4">
-                <MarkdownPreview
-                    content={Content00}
-                />
-                <MarkdownPreview
-                    filename="Create_Next_App"
-                    content={Code00}
-                />
-                <MarkdownPreview
-                    filename="Add_Dependencies"
-                    content={Code01}
-                />
-                <MarkdownPreview
-                    filename="lib/utils"
-                    content={Content01}
-                />
-                <MarkdownPreview
-                    filename="components/NextImage"
-                    content={NextImageCode}
-                />
-                <MarkdownPreview
-                    content={Content02}
-                />
-                <MarkdownPreview
-                    filename="index"
-                    content={Code02}
-                />
-                <MarkdownPreview
-                    content={Content03}
-                />
-                <MarkdownPreview
-                    filename="Example_Page"
-                    content={Code03}
-                />
-                <MarkdownPreview
-                    content={Content04}
-                />
-                <MarkdownPreview
-                    filename="Custom_CSS"
-                    content={Code04}
-                />
-                <MarkdownPreview
-                    content={Content05}
-                />
-            </div>
+        <main className="w-full max-w-[90%] mx-auto flex flex-col gap-4 items-center">
+            <MarkdownPreview
+                content={Content00}
+            />
+            <MarkdownPreview
+                filename="Create_Next_App"
+                content={Code00}
+            />
+            <MarkdownPreview
+                filename="Add_Dependencies"
+                content={Code01}
+            />
+            <MarkdownPreview
+                filename="lib/utils"
+                content={Content01}
+            />
+            <MarkdownPreview
+                filename="components/NextImage"
+                content={NextImageCode}
+            />
+            <MarkdownPreview
+                content={Content02}
+            />
+            <MarkdownPreview
+                filename="index"
+                content={Code02}
+            />
+            <MarkdownPreview
+                content={Content03}
+            />
+            <MarkdownPreview
+                filename="Example_Page"
+                content={Code03}
+            />
+            <MarkdownPreview
+                content={Content04}
+            />
+            <MarkdownPreview
+                filename="Custom_CSS"
+                content={Code04}
+            />
+            <MarkdownPreview
+                content={Content05}
+            />
         </main>
     );
 }
