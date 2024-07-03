@@ -11,15 +11,15 @@ const ImageSRCs = [
 export default function Home() {
     return (
         <div className="w-full max-w-[90vw] mx-auto">
-            <div className="grid grid-cols-2 max-sm:grid-cols-1 gap-4 py-4">
-                <div className="w-full border-dashed border-[1px] border-white/50 rounded-lg">
+            <div className="grid grid-cols-2 max-sm:grid-cols-1 gap-8 py-8">
+                <div className="w-full border-dashed border border-black/50 dark:border-white/50 rounded-lg">
                     <div className="flex flex-col">
-                        <div className="p-2 border-dashed border-b border-white/50">
+                        <div className="p-2 border-dashed border-b border-black/50 dark:border-white/50">
                             <h2 className="text-center">Image</h2>
                         </div>
                         <div className="flex flex-col gap-4 p-4">
                             {ImageSRCs.map((image, index) => (
-                                <div key={index} className="rounded-md border-[1px] border-white/50 shadow-lg">
+                                <div key={index} className="rounded-md border border-black/50 dark:border-white/50">
                                     <Image
                                         src={image}
                                         alt="Image"
@@ -32,14 +32,14 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="w-full border-dashed border-[1px] border-white/50 rounded-lg">
+                <div className="w-full border-dashed border border-black/50 dark:border-white/50 rounded-lg">
                     <div className="flex flex-col">
-                        <div className="p-2 border-dashed border-b border-white/50">
+                        <div className="p-2 border-dashed border-b border-black/50 dark:border-white/50">
                             <h2 className="text-center">NextImage-Loader</h2>
                         </div>
                         <div className="flex flex-col gap-4 p-4">
                             {ImageSRCs.map((image, index) => (
-                                <div key={index} className="overflow-hidden rounded-md border-[1px] border-white/50 shadow-lg">
+                                <div key={index} className="overflow-hidden rounded-md border border-black/50 dark:border-white/50">
                                     <NextImage
                                         src={image}
                                         alt="Image"
